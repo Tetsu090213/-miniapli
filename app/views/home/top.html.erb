@@ -1,7 +1,6 @@
 <%# app/views/home/top.html.erb %>
 
-<h1>トップ</h1>
-<p>ミニアプリ作成中（ターゲットを攻撃！）</p>
+<h1 style="text-align: center;">お前もキツツキにならないか?</h1>
 
 <div data-controller="woodpecker" class="pecking-stage" style="position: relative; width: 100%; height: 500px; background-color: #f0f0f0; overflow: hidden;">
 
@@ -25,7 +24,7 @@
 
 <hr>
 <div style="margin-top: 20px; padding: 20px; border: 1px solid #ccc; background-color: #fafafa;">
-  <h3>ターゲット画像をアップロード</h3>
+  <h3>つつきたい画像をアップロード</h3>
 
   <%# Target.new を渡すことで、TargetsController の create アクションへデータが飛びます %>
   <%= form_with model: Target.new do |f| %>

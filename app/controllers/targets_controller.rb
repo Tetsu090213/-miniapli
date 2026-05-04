@@ -3,10 +3,10 @@ class TargetsController < ApplicationController
   def create
     # ★ ここを追加：新しい画像を保存する前に、既存のデータをすべて削除する
     Target.destroy_all
-    
+
     # フォームから送られてきたデータで新しいTargetを作成
     @target = Target.new(target_params)
-    
+
     if @target.save
       # 保存に成功したらトップページへ戻り、メッセージを表示
       redirect_to root_path, notice: "ターゲットを更新しました！"

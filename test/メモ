@@ -1,0 +1,5 @@
+<%# app/views/targets/new.html.erb イメージ %>
+<%= form_with model: @target do |f| %>
+  <%= f.file_field :image %>
+  <%= f.submit "画像をアップロードして攻撃開始！" %>
+<% end %>

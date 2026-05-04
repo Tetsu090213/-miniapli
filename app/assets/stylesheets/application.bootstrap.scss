@@ -1,2 +1,29 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+/* app/assets/stylesheets/application.bootstrap.scss 等 */
+
+/* キツツキのつつく動作（前回と同じ） */
+.is-pecking {
+  animation: woodpecker-peck 0.1s ease-in-out;
+  transform-origin: 10px 15px;
+}
+
+@keyframes woodpecker-peck {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-20deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* ターゲット画像だけが左右に揺れる動作 */
+.is-vibrating {
+  animation: image-shake 0.1s ease-in-out 3; /* 3回素早く揺れる */
+}
+
+@keyframes image-shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
